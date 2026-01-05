@@ -9,12 +9,13 @@ import { MatDialogModule, MatDialogActions, MatDialogContent } from '@angular/ma
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { CardInfoComponent } from '../card-info/card-info.component';
 
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatDialogModule, MatDialogActions, MatDialogContent, MatFormFieldModule, FormsModule],
+  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatDialogModule, MatDialogActions, MatDialogContent, MatFormFieldModule, FormsModule, CardInfoComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
@@ -37,8 +38,8 @@ export class GameComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+    dialogRef.afterClosed().subscribe((name: string) => {
+      this.game.players.push(name);
     });
   }
 

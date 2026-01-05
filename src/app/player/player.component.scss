@@ -1,12 +1,17 @@
 .player {
     display: flex;
     align-items: center;
-    background-color: orange;
+    background-color: rgb(240, 128, 128, 0.6);
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
     width: 300px;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
 
     span {
         font-size: 32px;
@@ -19,4 +24,8 @@
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+.player-active {
+    background-color: lightgreen;
 }
