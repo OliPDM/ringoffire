@@ -7,6 +7,5 @@
     </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button matButton>No Thanks</button>
-    <button matButton [mat-dialog-close]="name" cdkFocusInitial>Ok</button>
+    <button matButton [disabled]="name.length == 0" [mat-dialog-close]="name" cdkFocusInitial>Ok</button>
 </mat-dialog-actions>

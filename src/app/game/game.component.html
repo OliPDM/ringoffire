@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<app-card-info class="card-info"></app-card-info>
+<app-card-info [card]="currentCard" class="card-info"></app-card-info>
 
 <button matFab (click)="openDialog()" class="add-btn">
     <mat-icon>add</mat-icon>
