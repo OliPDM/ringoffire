@@ -15,14 +15,14 @@
         <img class="played-card" src="assets/img/cards/{{card}}.png" alt="">
         }
 
-        @if (pickCardAnimation) {
-        <img (click)="takeCard()" class="pick-card" style="right: 25px;" src="assets/img/cards/{{currentCard}}.png"
+        @if (game.pickCardAnimation) {
+        <img (click)="takeCard()" class="pick-card" style="right: 25px;" src="assets/img/cards/{{game.currentCard}}.png"
             alt="">
         }
     </div>
 </div>
 
-<app-card-info [card]="currentCard" class="card-info"></app-card-info>
+<app-card-info [card]="game.currentCard" class="card-info"></app-card-info>
 
 <button matFab (click)="openDialog()" class="add-btn">
     <mat-icon>add</mat-icon>
