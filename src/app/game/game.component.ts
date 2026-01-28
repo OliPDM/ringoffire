@@ -12,12 +12,13 @@ import { FormsModule } from '@angular/forms';
 import { CardInfoComponent } from '../card-info/card-info.component';
 import { Firestore, doc, docData, updateDoc } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
+import { PlayerMobileComponent } from "../player-mobile/player-mobile.component";
 
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatDialogModule, MatDialogActions, MatDialogContent, MatFormFieldModule, FormsModule, CardInfoComponent],
+  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatDialogModule, MatDialogActions, MatDialogContent, MatFormFieldModule, FormsModule, CardInfoComponent, PlayerMobileComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })

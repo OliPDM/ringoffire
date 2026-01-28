@@ -12,6 +12,7 @@
 
 .card-stack {
     position: relative;
+    right: 100px;
 
     >img {
         position: absolute;
@@ -67,6 +68,7 @@
     position: absolute;
     right: 50px;
     z-index: 1;
+    overflow-x: scroll;
 }
 
 .add-btn {
@@ -80,4 +82,27 @@
     bottom: 32px;
     left: 100px;
     right: 100px;
+
+    @media (max-width: 900px) {
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+}
+
+.scroll-container-mobile {
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow-y: scroll;
+
+    app-player-mobile {
+        margin-left: 8px;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }

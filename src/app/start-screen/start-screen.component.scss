@@ -8,6 +8,10 @@ section {
     align-items: center;
     flex-direction: column;
 
+    @media (max-width: 900px) {
+        overflow: hidden;
+    }
+
     >img {
         height: 100%;
         max-width: 100%;

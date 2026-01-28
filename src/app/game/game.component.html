@@ -1,7 +1,14 @@
 @for (player of game.players; track $index){
-<app-player [playerActive]="$index == game.currentPlayer" [style.top.px]="50 + $index * 80" style="right: 10px;"
-    [name]="player" class="player-position"></app-player>
+<app-player [playerActive]="$index == game.currentPlayer" [style.top.px]="20 + $index * 80" style="right: 10px;"
+    [name]="player" class="player-position hide-mobile"></app-player>
 }
+
+<div class="scroll-container-mobile hide-desktop">
+    @for(player of game.players; track $index){
+    <app-player-mobile [playerActive]="$index == game.currentPlayer" [name]="player"></app-player-mobile>
+    }
+</div>
+
 
 
 <div class="field">
